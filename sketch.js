@@ -64,6 +64,8 @@ let gridCanvasFunction = function (p) {
             }
             mouseStatus = false;
         }
+        pp = p.select("#debug");
+        pp.html("MouseX: " + p.mouseX + " MouseY: " + p.mouseY);
         return false;
     }
 }
