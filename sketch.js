@@ -29,7 +29,8 @@ let gridCanvasFunction = function (p) {
     p.draw = function () {
         p.background(250);
         scoreText.html(`Lines Cleared: ${linesCleared}`);
-
+        pp = p.select("#debug");
+        pp.html("Haleluya -> MouseX: " + p.mouseX + " MouseY: " + p.mouseY);
         drawLines(blockSize);
         drawGrid();
 
@@ -64,7 +65,7 @@ let gridCanvasFunction = function (p) {
             }
             mouseStatus = false;
         }
-        pp = p.select("#debug");
+        pp = p.select("#debhag");
         pp.html("MouseX: " + p.mouseX + " MouseY: " + p.mouseY);
         return false;
     }
