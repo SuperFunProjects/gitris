@@ -6,7 +6,7 @@ let holdPieceCanvas = function (p) {
         heading = p.createElement('h2', 'HOLD');
 
         canabis = p.createCanvas(4*blockSize, 4*blockSize);
-        canabis.touchMoved(p.letThereBeTouch);
+        canabis.mouseClicked(p.letThereBeTouch);
         canabis.style('clear', 'right');
 
         p.frameRate(24);
@@ -28,13 +28,6 @@ let holdPieceCanvas = function (p) {
                 p.rect(i.x-3*blockSize, i.y, blockSize);
             }
         }
-    }
-
-    p.mousePressed = function () {
-        return false;
-    }
-    p.mouseReleased = function () {
-        return false;
     }
 
     p.letThereBeTouch = function () {
