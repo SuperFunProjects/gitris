@@ -1,5 +1,5 @@
 html, body {
-    margin-top: 25px;
+    /*margin-top: 25px;*/
     padding: 0;
 }
 canvas {
@@ -8,8 +8,8 @@ canvas {
 }
 #root {
     display: block;
-    height: 800px;
-    max-width: 650px;
+    /*height: 800px;*/
+    max-width: 750px;
     background-color: #e6e6e6;
     margin: auto;
 }

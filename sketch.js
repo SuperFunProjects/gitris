@@ -1,4 +1,4 @@
-const blockSize = 30;
+const blockSize = 35;
 let linesCleared;
 let activePiece;
 let nextPieceNo = [];
@@ -54,23 +54,23 @@ let gridCanvasFunction = function (p) {
     }
     p.tEnded = function () {
         if(mouseOnCanvas == true) {
-            if((xtouch-p.mouseX)/xtouch > 0.2) {
+            if((xtouch-p.mouseX) >= p.width/5) {
                 console.log("grid canvas: L swipe");
                 activePiece.moveLeft();
             }
-            else if((p.mouseX-xtouch)/xtouch > 0.2) {
+            else if((xtouch-p.mouseX) <= p.width/5) {
                 console.log("grid canvas: R swipe");
                 activePiece.moveRight();
             }
-            else if((p.mouseY-ytouch)/ytouch > 0.2) {
+            else if((ytouch-p.mouseY) <= p.height/5) {
                 console.log("grid canvas: D swipe");
                 activePiece.moveDown();
             }
-            else if((ytouch-p.mouseY)/ytouch > 0.2) {
+            else if((ytouch-p.mouseY) >= p.height/5) {
                 console.log("grid canvas: U swipe");
                 activePiece.rotatePiece(1);
             }
-            mouseStatus = false;
+            mouseOnCanvas = false;
         }
         pp = p.select("#debhag");
         pp.html("tended -> " + p.mouseX + " MouseY: " + p.mouseY);
