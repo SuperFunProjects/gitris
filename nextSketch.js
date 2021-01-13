@@ -5,7 +5,7 @@
         heading = p.createElement('h2', 'NEXT');
 
         canabis = p.createCanvas(4*blockSize, 12*blockSize);
-        canabis.mouseClicked(p.letThereBeTouch);
+        canabis.touchMoved(p.letThereBeTouch);
 
         p.frameRate(24);
     }
@@ -27,6 +27,13 @@
             }
         }
     }
+
+     p.mousePressed = function () {
+         return false;
+     }
+     p.mouseReleased = function () {
+         return false;
+     }
 
     p.letThereBeTouch = function () {
         console.log("next: hard drop");

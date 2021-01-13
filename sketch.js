@@ -14,8 +14,8 @@ let gridCanvasFunction = function (p) {
         scoreText = p.createElement('h2', ``);
 
         canabis = p.createCanvas(10*blockSize, 20*blockSize);
-        canabis.mousePressed(p.tStarted);
-        canabis.mouseReleased(p.tEnded);
+        canabis.touchStarted(p.tStarted);
+        canabis.touchEnded(p.tEnded);
         p.frameRate(24);
 
         initialSetupGrid();
@@ -29,8 +29,6 @@ let gridCanvasFunction = function (p) {
     p.draw = function () {
         p.background(250);
         scoreText.html(`Lines Cleared: ${linesCleared}`);
-        pp = p.select("#debug");
-        pp.html("Haleluya -> MouseX: " + p.mouseX + " MouseY: " + p.mouseY);
         drawLines(blockSize);
         drawGrid();
 
@@ -39,10 +37,10 @@ let gridCanvasFunction = function (p) {
         autoDown();
     }
 
-    p.touchStarted = function () {
+    p.mousePressed = function () {
         return false;
     }
-    p.touchEnded = function () {
+    p.mouseReleased = function () {
         return false;
     }
 
@@ -50,6 +48,8 @@ let gridCanvasFunction = function (p) {
         xtouch = p.mouseX;
         ytouch = p.mouseY;
         mouseStatus = true;
+        pp = p.select("#debug");
+        pp.html("tstarted -> MouseX: " + p.mouseX + " MouseY: " + p.mouseY);
         return false;
     }
     p.tEnded = function () {
@@ -73,7 +73,7 @@ let gridCanvasFunction = function (p) {
             mouseStatus = false;
         }
         pp = p.select("#debhag");
-        pp.html("MouseX: " + p.mouseX + " MouseY: " + p.mouseY);
+        pp.html("tended -> " + p.mouseX + " MouseY: " + p.mouseY);
         return false;
     }
 }
