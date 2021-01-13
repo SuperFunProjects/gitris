@@ -8,7 +8,7 @@ let canWeHold = true;
 
 // p5 instance for grid
 let gridCanvasFunction = function (p) {
-    let scoreText, xtouch, ytouch, canabis;
+    let mouseStatus = false, scoreText, xtouch, ytouch, canabis;
 
     p.setup = function () {
         scoreText = p.createElement('h2', ``);
@@ -41,24 +41,28 @@ let gridCanvasFunction = function (p) {
     p.tStarted = function () {
         xtouch = p.mouseX;
         ytouch = p.mouseY;
+        mouseStatus = true;
         return false;
     }
     p.tEnded = function () {
-        if((xtouch-p.mouseX)/xtouch > 0.3) {
-            console.log("grid canvas: L swipe");
-            activePiece.moveLeft();
-        }
-        else if((p.mouseX-xtouch)/xtouch > 0.3) {
-            console.log("grid canvas: R swipe");
-            activePiece.moveRight();
-        }
-        else if((p.mouseY-ytouch)/ytouch > 0.3) {
-            console.log("grid canvas: D swipe");
-            activePiece.moveDown();
-        }
-        else if((ytouch-p.mouseY)/ytouch > 0.3) {
-            console.log("grid canvas: U swipe");
-            activePiece.rotatePiece(1);
+        if(mouseStatus == true) {
+            if((xtouch-p.mouseX)/xtouch > 0.3) {
+                console.log("grid canvas: L swipe");
+                activePiece.moveLeft();
+            }
+            else if((p.mouseX-xtouch)/xtouch > 0.3) {
+                console.log("grid canvas: R swipe");
+                activePiece.moveRight();
+            }
+            else if((p.mouseY-ytouch)/ytouch > 0.3) {
+                console.log("grid canvas: D swipe");
+                activePiece.moveDown();
+            }
+            else if((ytouch-p.mouseY)/ytouch > 0.3) {
+                console.log("grid canvas: U swipe");
+                activePiece.rotatePiece(1);
+            }
+            mouseStatus = false;
         }
         return false;
     }
