@@ -39,10 +39,10 @@ let gridCanvasFunction = function (p) {
         autoDown();
     }
 
-    p.mousePressed = function () {
+    p.touchStarted = function () {
         return false;
     }
-    p.mouseReleased = function () {
+    p.touchEnded = function () {
         return false;
     }
 
