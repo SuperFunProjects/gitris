@@ -5,7 +5,7 @@
         heading = p.createElement('h2', 'NEXT');
 
         canabis = p.createCanvas(4*blockSize, 12*blockSize);
-        canabis.mousePressed(p.letThereBeTouch);
+        canabis.mouseClicked(p.letThereBeTouch);
 
         p.frameRate(24);
     }

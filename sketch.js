@@ -14,8 +14,8 @@ let gridCanvasFunction = function (p) {
         scoreText = p.createElement('h2', ``);
 
         canabis = p.createCanvas(10*blockSize, 20*blockSize);
-        // canabis.mousePressed(p.tStarted());
-        // canabis.mouseReleased(p.tEnded());
+        canabis.mousePressed(p.tStarted);
+        canabis.mouseReleased(p.tEnded);
         p.frameRate(24);
 
         initialSetupGrid();
@@ -38,12 +38,12 @@ let gridCanvasFunction = function (p) {
         autoDown();
     }
 
-    p.mousePressed = function () {
+    p.tStarted = function () {
         xtouch = p.mouseX;
         ytouch = p.mouseY;
         return false;
     }
-    p.mouseReleased = function () {
+    p.tEnded = function () {
         if((xtouch-p.mouseX)/xtouch > 0.3) {
             console.log("grid canvas: L swipe");
             activePiece.moveLeft();
