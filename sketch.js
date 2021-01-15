@@ -16,7 +16,8 @@ let gridCanvasFunction = function (p) {
         canabis = p.createCanvas(10*blockSize, 20*blockSize);
         // canabis.mousePressed(p.tStarted);
         // canabis.mouseReleased(p.tEnded);
-        canabis.touchStarted(function () {
+        canabis.touchStarted(false);
+        canabis.touchEnded(function () {
             if(p.pmouseX/p.width <= -0.2) {
                 console.log("grid canvas: L swipe");
                 activePiece.moveLeft();
