@@ -14,10 +14,8 @@ let gridCanvasFunction = function (p) {
         scoreText = p.createElement('h2', ``);
 
         canabis = p.createCanvas(10*blockSize, 20*blockSize);
-        // canabis.mousePressed(p.tStarted);
-        // canabis.mouseReleased(p.tEnded);
-        canabis.touchStarted(p.tStarted);
-        canabis.touchEnded(p.tEnded);
+        canabis.mousePressed(p.tStarted);
+        canabis.mouseReleased(p.tEnded);
         p.frameRate(24);
 
         initialSetupGrid();
