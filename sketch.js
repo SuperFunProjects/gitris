@@ -16,23 +16,24 @@ let gridCanvasFunction = function (p) {
         canabis = p.createCanvas(10*blockSize, 20*blockSize);
         // canabis.mousePressed(p.tStarted);
         // canabis.mouseReleased(p.tEnded);
-        canabis.touchMoved(function () {
-            if(-p.pmouseX/p.width >= 0.2) {
+        canabis.touchStarted(function () {
+            if(p.pmouseX/p.width <= -0.2) {
                 console.log("grid canvas: L swipe");
                 activePiece.moveLeft();
             }
-            else if(p.pmouseX/p.width > 0.2) {
+            else if(p.pmouseX/p.width >= 0.2) {
                 console.log("grid canvas: R swipe");
                 activePiece.moveRight();
             }
-            else if(p.pmouseY/p.height > 0.2) {
+            else if(p.pmouseY/p.height >= 0.2) {
                 console.log("grid canvas: D swipe");
                 activePiece.moveDown();
             }
-            else if(-p.pmouseY/p.height > 0.2) {
+            else if(p.pmouseY/p.height <= -0.2) {
                 console.log("grid canvas: U swipe");
                 activePiece.rotatePiece(1);
             }
+            return false;
         });
         p.frameRate(24);
 
