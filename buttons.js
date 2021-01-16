@@ -10,7 +10,7 @@ let buttonCanvas = function (p) {
         p.clear();
 
         p.noFill();
-P.stroke(0);
+p.stroke(0);
         p.StrokeWeight(4);
         up = p.rect(3*blockSize, 0*blockSize, 3*blockSize, 3*blockSize, 40);
         down = p.rect(3*blockSize, 6*blockSize, 3*blockSize, 3*blockSize, 40);
