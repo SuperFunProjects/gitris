@@ -23,6 +23,6 @@ div.sections {
     float: bottom;
 }
 #buttons {
-    width: available;
+    width: inherit;
     margin: auto;
 }
