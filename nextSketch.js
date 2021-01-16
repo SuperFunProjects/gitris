@@ -29,7 +29,8 @@
     }
 
     p.letThereBeTouch = function () {
-        console.log("next: hard drop");
+        //console.log("next: hard drop");
+window.navigator.vibrate(vibrationStrength);
         activePiece.hardDrop();
     }
 }
