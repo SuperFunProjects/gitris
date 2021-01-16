@@ -1,4 +1,4 @@
-var vibrationStrength = 1;
+
 
 let buttonCanvas = function (p) {
     let canabis, heading, up, down, left, right;
