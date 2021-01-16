@@ -1,3 +1,5 @@
+var vibrationSttength = 100;
+
 let buttonCanvas = function (p) {
     let canabis, heading, up, down, left, right;
 
@@ -25,13 +27,16 @@ p.strokeWeight(5);
         let y = p.mouseY;
         if (x >= 3*blockSize && y >=0 && x <= 6*blockSize && y <= 3*blockSize)
             {activePiece.rotatePiece(1);
-window.navigator.vibrate(200)} //up
+window.navigator.vibrate(vibrationStrength)} //up
         if (x >= 3*blockSize && y >=6*blockSize && x <= 6*blockSize && y <= 9*blockSize)
-            activePiece.moveDown(); //down
+            {activePiece.moveDown(); //down
+window.navigator.vibrate(vibrationStrength);}
         if (x >= 0*blockSize && y >=3*blockSize && x <= 3*blockSize && y <= 6*blockSize)
-            activePiece.moveLeft(); //left
+            {activePiece.moveLeft(); //left
+window.navigator.vibrate(vibrationStrength);}
         if (x >= 6*blockSize && y >=3*blockSize && x <= 9*blockSize && y <= 6*blockSize)
-            activePiece.moveRight();
+            {activePiece.moveRight();
+window.navigator.vibrate(vibrationStrength);}
     }
 }
 
