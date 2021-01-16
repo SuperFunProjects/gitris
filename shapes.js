@@ -39,6 +39,7 @@ class artifacts {
     }
     createPiece() {
         if (this.doesItFit() == false) {
+window.navigator.vibrate(50*vibrationStrength);
             window.alert("GAME OVER");
             gc.noLoop();
             npc.noLoop();
