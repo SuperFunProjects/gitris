@@ -39,11 +39,12 @@ class artifacts {
     }
     createPiece() {
         if (this.doesItFit() == false) {
-window.navigator.vibrate(50*vibrationStrength);
-            window.alert("GAME OVER");
+
+window.navigator.vibrate(50);
             gc.noLoop();
             npc.noLoop();
             hpc.noLoop();
+window.alert("GAME OVER");
         } else {
             this.createDropPreview();
             for (let i of this.piece.blockPositions) {
