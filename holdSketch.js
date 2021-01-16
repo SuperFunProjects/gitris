@@ -32,7 +32,8 @@ let holdPieceCanvas = function (p) {
     }
 
     p.letThereBeTouch = function () {
-        console.log("hold: touched");
+        //console.log("hold: touched");
+window.navigator.vibrate(vibrationStrength);
         holdPiece();
     }
 }
