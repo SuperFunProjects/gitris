@@ -6,6 +6,7 @@ let buttonCanvas = function (p) {
 
         canabis = p.createCanvas(9*blockSize, 9*blockSize);
         canabis.style("border", "none");
+        canabis.style("margin", "auto");
         canabis.mouseClicked(p.handleClicks);
         p.clear();
 

@@ -23,6 +23,6 @@ div.sections {
     float: bottom;
 }
 #buttons {
-    max-width: available;
+    width: available;
     margin: auto;
 }
