@@ -24,7 +24,8 @@ p.strokeWeight(5);
         let x = p.mouseX;
         let y = p.mouseY;
         if (x >= 3*blockSize && y >=0 && x <= 6*blockSize && y <= 3*blockSize)
-            activePiece.rotatePiece(1); //up
+            {activePiece.rotatePiece(1);
+window.navigator.vibrate(200)} //up
         if (x >= 3*blockSize && y >=6*blockSize && x <= 6*blockSize && y <= 9*blockSize)
             activePiece.moveDown(); //down
         if (x >= 0*blockSize && y >=3*blockSize && x <= 3*blockSize && y <= 6*blockSize)
