@@ -23,7 +23,7 @@ let buttonCanvas = function (p) {
         if (x >= 3*blockSize && y >=0 && x <= 6*blockSize && y <= 3*blockSize)
             activePiece.rotatePiece(1); //up
         if (x >= 3*blockSize && y >=6*blockSize && x <= 6*blockSize && y <= 9*blockSize)
-            activePiece.rotatePiece(-1); //down
+            activePiece.moveDown(); //down
         if (x >= 0*blockSize && y >=3*blockSize && x <= 3*blockSize && y <= 6*blockSize)
             activePiece.moveLeft(); //left
         if (x >= 6*blockSize && y >=3*blockSize && x <= 9*blockSize && y <= 6*blockSize)
