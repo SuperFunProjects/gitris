@@ -22,9 +22,10 @@ div.sections {
 }
 #hold {
     float: bottom;
+padding-left: 50px;
 }
 #grid {
-padding-left: 50px;
+padding-left: 80px;
 }
 #buttons {
     max-width: 560px;
