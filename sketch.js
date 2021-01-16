@@ -1,4 +1,5 @@
 const blockSize = 35;
+let vibrationStrength = 1;
 let linesCleared;
 let activePiece;
 let nextPieceNo = [];
