@@ -2,8 +2,6 @@ let buttonCanvas = function (p) {
     let canabis, heading, up, down, left, right;
 
     p.setup = function () {
-        heading = p.createElement('h2', 'Controls');
-
         canabis = p.createCanvas(9*blockSize, 9*blockSize);
         canabis.style("border", "none");
         canabis.style("margin", "auto");
