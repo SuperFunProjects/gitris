@@ -2,7 +2,7 @@ let buttonCanvas = function (p) {
     let canabis, heading, up, down, left, right;
 
     p.setup = function () {
-        canabis = p.createCanvas(9*blockSize, 9*blockSize);
+        canabis = p.createCanvas(9.2*blockSize, 9.2*blockSize);
         canabis.style("border", "none");
         canabis.style("margin", "auto");
         canabis.style("float", "none");
@@ -11,6 +11,7 @@ let buttonCanvas = function (p) {
 
 //p.fill("black");
 //p.noStroke();
+p.translate(0.2*blockSize, 0.2*blockSize);
 p.noFill();
 p.strokeWeight(5);
         up = p.rect(3*blockSize, 0*blockSize, 3*blockSize, 3*blockSize, 40);
