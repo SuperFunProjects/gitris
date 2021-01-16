@@ -8,9 +8,7 @@ canvas {
 }
 #root {
     display: block;
-    /*height: 800px;*/
-    max-width: 750px;
-    background-color: #e6e6e6;
+    max-width: max-content;
     margin: auto;
 }
 div.sections {
