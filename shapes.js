@@ -40,7 +40,7 @@ class artifacts {
     createPiece() {
         if (this.doesItFit() == false) {
 
-window.navigator.vibrate(50);
+window.navigator.vibrate(10*vibrationStrength);
             gc.noLoop();
             npc.noLoop();
             hpc.noLoop();
