@@ -11,7 +11,7 @@ let buttonCanvas = function (p) {
 
 //p.fill("black");
 //p.noStroke();
-p.translate(0.2*blockSize, 0.2*blockSize);
+p.translate(0.1*blockSize, 0.1*blockSize);
 p.noFill();
 p.strokeWeight(5);
         up = p.rect(3*blockSize, 0*blockSize, 3*blockSize, 3*blockSize, 40);
