@@ -8,14 +8,12 @@ let canWeHold = true;
 
 // p5 instance for grid
 let gridCanvasFunction = function (p) {
-    let mouseOnCanvas = false, scoreText, xtouch, ytouch, canabis;
+    let scoreText, canabis;
 
     p.setup = function () {
         scoreText = p.createElement('h2', ``);
 
         canabis = p.createCanvas(10*blockSize, 20*blockSize);
-        canabis.mousePressed(p.tStarted);
-        canabis.mouseReleased(p.tEnded);
         p.frameRate(24);
 
         initialSetupGrid();
@@ -35,35 +33,6 @@ let gridCanvasFunction = function (p) {
         activePiece.createPiece();
         downKeyPresses();
         autoDown();
-    }
-
-    p.tStarted = function () {
-        xtouch = p.mouseX;
-        ytouch = p.mouseY;
-        mouseOnCanvas = true;
-        return false;
-    }
-    p.tEnded = function () {
-        if(mouseOnCanvas == true) {
-            if((xtouch-p.mouseX)/xtouch >= 0.3) {
-                console.log("grid canvas: L swipe");
-                activePiece.moveLeft();
-            }
-            else if((p.mouseX-xtouch)/xtouch >= 0.3) {
-                console.log("grid canvas: R swipe");
-                activePiece.moveRight();
-            }
-            // else if((p.mouseY-ytouch)/ytouch >= 0.3) {
-            //     console.log("grid canvas: D swipe");
-            //     activePiece.moveDown();
-            // }
-            else if((ytouch-p.mouseY)/ytouch >= 0.3) {
-                console.log("grid canvas: U swipe");
-                activePiece.rotatePiece(1);
-            }
-            mouseOnCanvas = false;
-        }
-        return false;
     }
 }
 let gc = new p5(gridCanvasFunction, "grid");
