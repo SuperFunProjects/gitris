@@ -23,6 +23,9 @@ div.sections {
 #hold {
     float: bottom;
 }
+#grid {
+padding-left: 50px
+}
 #buttons {
     max-width: 560px;
     box-sizing: content-box;
