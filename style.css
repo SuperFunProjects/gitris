@@ -22,7 +22,7 @@ div.sections {
 }
 #hold {
     float: bottom;
-padding-left: 50px;
+margin-left: 50px;
 }
 #grid {
 padding-left: 80px;
