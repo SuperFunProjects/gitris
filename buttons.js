@@ -8,8 +8,9 @@ let buttonCanvas = function (p) {
         canabis.style("float", "none");
         canabis.mouseClicked(p.handleClicks);
         p.clear();
-p.stroke(0);
-        p.StrokeWeight(4);
+
+p.fill("black");
+p.noStroke();
         up = p.rect(3*blockSize, 0*blockSize, 3*blockSize, 3*blockSize, 40);
         down = p.rect(3*blockSize, 6*blockSize, 3*blockSize, 3*blockSize, 40);
         left = p.rect(0*blockSize, 3*blockSize, 3*blockSize, 3*blockSize, 40);
