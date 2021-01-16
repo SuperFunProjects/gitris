@@ -4,6 +4,7 @@ let holdPieceCanvas = function (p) {
 
     p.setup = function () {
         heading = p.createElement('h2', 'HOLD');
+        heading.style("margin-top", "80px");
 
         canabis = p.createCanvas(4*blockSize, 4*blockSize);
         canabis.mouseClicked(p.letThereBeTouch);
