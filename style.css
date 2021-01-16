@@ -22,3 +22,7 @@ div.sections {
 #hold {
     float: bottom;
 }
+#buttons {
+    max-width: available;
+    margin: auto;
+}
