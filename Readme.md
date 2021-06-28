@@ -1,1 +1,1 @@
-[Active Deployment at -> ](https://superfunprojects.github.io/gitris/)
+[See Active Deployment](https://superfunprojects.github.io/gitris/)
